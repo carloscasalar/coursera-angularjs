@@ -1,0 +1,25 @@
+<div class="row" ng-repeat="item in list.foundItems track by $index">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title pull-left"><span ng-bind="item.name"></span> - [<strong ng-bind="item.short_name"></strong>]</h3>
+                <button class="btn btn-danger pull-right" ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <p ng-bind="item.description"></p>
+            </div>
+        </div>
+        <!-- <div class="col-md-4"><span ng-bind="item.name"></span> - [<strong ng-bind="item.short_name"></strong>]</div>
+    <div class="col-md-6">
+        <p ng-bind="item.description"></p>
+    </div>
+    <div class="col-md-2"><button class="btn btn-danger" ng-click="list.onRemove({index: $index});">Don't want this one!</button></div> -->
+    </div>
+    <div class="row" ng-show="list.foundItems.length===0">
+        <div class="col-md-11">
+            <div class="alert alert-info">
+                <strong>Info!</strong> No items found.
+            </div>
+        </div>
+    </div>
