@@ -11,7 +11,7 @@
 <body>
     <div class="container" ng-controller="NarrowItDownController as narrow">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-offset-1 col-md-11">
                 <h1>Narrow Down Your Chinese Menu Choice</h1>
 
                 <div class="form-group">
@@ -22,6 +22,14 @@
                 </div>
             </div>
         </div>
+        <div class="row" ng-show="narrow.noItemsFound">
+            <div class="col-md-11">
+                <div class="alert alert-info">
+                    Nothing found.
+                </div>
+            </div>
+        </div>
+
         <!-- found-items should be implemented as a component -->
         <found-items class="container" found-items="narrow.found" on-remove="narrow.removeUnwanted(index)"></found-items>
     </div>

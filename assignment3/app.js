@@ -55,13 +55,13 @@
     // Controller exposed model
     narrow.found = undefined;
     narrow.searchTerm = '';
+    narrow.noItemsFound = false;
 
     function doSearch() {
-      console.log('doSearch invocado');
       MenuSearchService.getMatchedMenuItems(narrow.searchTerm)
         .then(function(items) {
           narrow.found = items;
-          console.log('Encontrados items:', items);
+          narrow.noItemsFound = (items.length === 0);
         });
     }
 
