@@ -2,20 +2,21 @@
   'use strict';
 
   app.component('categories', {
-    bindings:{
-      categories: '<'
+    bindings: {
+      items: '<'
     },
-    templateUrl: 'categories.component.html',
+    templateUrl: 'src/components/categories.component.html',
     controller: CatetoriesComponentController
   });
 
   CatetoriesComponentController.$inject = [];
-  function CatetoriesComponentController(){
+
+  function CatetoriesComponentController() {
     var $ctrl = this;
 
     $ctrl.$onInit = onInit;
 
-    function onInit(){
+    function onInit() {
 
     }
   }

@@ -12,21 +12,32 @@
     <div class="container">
         <h1>Restaurant menu</h1>
 
-
+        <div class="row">
+            <div class="col-md-12">
+                <ui-view></ui-view>
+            </div>
+        </div>
     </div>
 
     <script src="../lib/jquery/jquery.min.js"></script>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="../lib/angular/angular.min.js"></script>
+    <script src="../lib/angular-ui-router/release/angular-ui-router.js"></script>
 
-    <script src="./data/data.module.js"></script>
-    <script src="menuapp.module.js"></script>
 
-    <script src="./data/end-points.constant.js"></script>
-    <script src="./data/menu-data.service.js"></script>
+    <script src="src/data/data.module.js"></script>
+    <script src="src/menuapp.module.js"></script>
 
-    <script src="./categories.component.js"></script>
-    <script src="./items.component.js"></script>
+    <script src="src/data/end-points.constant.js"></script>
+    <script src="src/data/menu-data.service.js"></script>
+
+    <script src="src/components/categories.component.js"></script>
+    <script src="src/components/items.component.js"></script>
+
+    <script src="src/states/items-state.controller.js"></script>
+    <script src="src/states/categories-state.controller.js"></script>
+    <script src="src/states/routes.js"></script>
+
 
 </body>
 

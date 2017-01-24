@@ -3,9 +3,10 @@
 
   app.component('items', {
     bindings:{
-      menuItems: '<'
+      items: '<',
+      category: '<'
     },
-    templateUrl: 'items.component.html',
+    templateUrl: 'src/components/items.component.html',
     controller: ItemsComponentController
   });
 
