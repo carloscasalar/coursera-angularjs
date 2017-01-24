@@ -1,0 +1,8 @@
+<h3>Items in category {{$ctrl.category.name}}</h3>
+<ul>
+  <li ng-repeat="item in $ctrl.items">
+    <span ng-bind="item.name" ></span>
+  </li>
+</ul>
+
+<a ui-sref="categories">&lt;- Back to category list</a>

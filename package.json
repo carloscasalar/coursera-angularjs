@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "browser-sync start --server --directory --files \"**/*\"",
-    "build": "cp node_modules/angular/angular.min.* lib/angular && cp node_modules/jquery/dist/jquery.min.* lib/jquery && cp node_modules/bootstrap/dist/css/* lib/bootstrap/css && cp node_modules/bootstrap/dist/fonts/* lib/bootstrap/fonts && cp node_modules/bootstrap/dist/js/* lib/bootstrap/js",
+    "build": "cp node_modules/angular/angular.min.* lib/angular && cp node_modules/jquery/dist/jquery.min.* lib/jquery && cp node_modules/bootstrap/dist/css/* lib/bootstrap/css && cp node_modules/bootstrap/dist/fonts/* lib/bootstrap/fonts && cp node_modules/bootstrap/dist/js/* lib/bootstrap/js && cp node_modules/angular-ui-router/release/* lib/angular-ui-router/release",
     "post-install": "npm run build"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-ui-router": "^0.4.2",
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.1"
   }
