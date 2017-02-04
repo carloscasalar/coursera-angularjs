@@ -1,0 +1,64 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">Sing up for the newsletter</h2>
+  <div class="text-center">
+    Suscribe to our awesome newsletter now!.
+  </div>
+
+  <form name="newsletterSU" novalidate>
+    <div class="form-group">
+        <label for="firstName">First name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="First name" name="firstName" ng-model="singUpCtrl.form.firstName" required maxlength="100">
+        <span class="fielderror" ng-if="newsletterSU.firstName.$touched && newsletterSU.firstName.$error.required">
+            First name is required.
+        </span>
+        <span class="fielderror" ng-if="newsletterSU.firstName.$touched && newsletterSU.firstName.$error.maxlength">
+            Max length for this field is 100.
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Last name" name="lastName" ng-model="singUpCtrl.form.lastName" required maxlength="100">
+        <span class="fielderror" ng-if="newsletterSU.lastName.$touched && newsletterSU.lastName.$error.required">
+            Last name is required.
+        </span>
+        <span class="fielderror" ng-if="newsletterSU.lastName.$touched && newsletterSU.lastName.$error.maxlength">
+            Max length for this field is 100.
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="someone@example.com" ng-model="singUpCtrl.form.email" required maxlength="500">
+        <span class="fielderror" ng-if="newsletterSU.email.$touched && newsletterSU.email.$error.required">
+            Email is required.
+        </span>
+        <span class="fielderror" ng-if="newsletterSU.email.$touched && newsletterSU.email.$error.email">
+            Invalid email.
+        </span>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone ###-###-####" ng-model="singUpCtrl.form.phone" required 
+               pattern="(\d{3})-(\d{3})-(\d{4})">
+        <span class="fielderror" ng-if="newsletterSU.phone.$touched && newsletterSU.phone.$error.required">
+            Phone number is required.
+        </span>
+        <span class="fielderror" ng-if="newsletterSU.phone.$touched && newsletterSU.phone.$error.pattern">
+            Phone must be in the format ###-###-####.
+        </span>
+    </div>
+
+    <div class="form-group">
+        <label for="favorite">Menú number of your favorite dish</label>
+        <input type="text" class="form-control" id="favorite" name="favorite" placeholder="A1" ng-model="singUpCtrl.form.favorite" required>
+        <span class="fielderror" ng-if="newsletterSU.favorite.$touched && newsletterSU.favorite.$error.required">
+            Favorite dish is required.
+        </span>
+        <span class="fielderror" ng-if="newsletterSU.favorite.$touched && newsletterSU.favorite.$error.doesNotExists">
+            This menu item doesn't exists
+        </span>
+    </div>
+    
+    <button type="button" class="btn btn-default" ng-disabled="newsletterSU.$invalid">Sign me up!</button>
+  </form>
+
+</div>
