@@ -3,7 +3,6 @@
     <div class="text-center">
         Suscribe to our awesome newsletter now!.
     </div>
-
     <form name="newsletterSU" novalidate>
         <div class="form-group">
             <label for="firstName">First name</label>
@@ -67,6 +66,11 @@
 
         <button type="button" class="btn btn-default" ng-disabled="newsletterSU.$invalid"
             ng-click="singUpCtrl.singUp()">Sign me up!</button>
+
+
+            <div class="alert alert-success feedbackMessage" ng-show="singUpCtrl.registered">
+                <strong>Success!</strong> Your information has been saved.
+            </div>
     </form>
 
 </div>

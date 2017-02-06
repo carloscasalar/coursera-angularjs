@@ -113,6 +113,12 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* SINGUP PAGE */
+.feedbackMessage {
+  margin-top: 20px;
+}
+/* END OF SINGUP PAGE */
+
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
