@@ -1,0 +1,40 @@
+<div class="container">
+    <h2 id="menu-categories-title" class="text-center">My Info</h2>
+    <div class="text-center">
+        Your registerd info.
+    </div>
+
+    <div class="row" ng-show="!myInfoCtrl.user">
+        <div class="col-md-12">
+            <div class="text-center">
+                Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-show="myInfoCtrl.user">
+        <div class="col-md-12">
+            <strong>First name:</strong> {{::myInfoCtrl.user.firstName}}<br />
+            <strong>Last name:</strong> {{::myInfoCtrl.user.lastName}}<br />
+            <strong>Email:</strong> {{::myInfoCtrl.user.email}}<br />
+            <strong>Phone:</strong> {{::myInfoCtrl.user.phone}}<br />
+        </div>
+    </div>
+    <div class="row" ng-show="myInfoCtrl.menuItem">
+        <div class="col-md-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row" ng-show="myInfoCtrl.menuItem">
+        <div class="col-md-6">
+            <strong>Favorite dish:</strong> {{::myInfoCtrl.menuItem.name}}<br />
+            <strong>Description:</strong> {{::myInfoCtrl.menuItem.description}}<br
+            />
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" width="250" height="150" ng-src="{{::myInfoCtrl.basePath}}/images/{{::myInfoCtrl.menuItem.short_name}}.jpg"
+                alt="{{::myInfoCtrl.menuItem.name}}">
+        </div>
+    </div>
+
+</div>
